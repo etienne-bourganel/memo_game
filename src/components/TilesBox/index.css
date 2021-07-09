@@ -1,0 +1,8 @@
+.TilesBox {
+  background-color: #fff;
+  border: 1px solid #000;
+
+  height: 60vh;
+  margin: 6rem auto;
+  width: 70vw;
+}
