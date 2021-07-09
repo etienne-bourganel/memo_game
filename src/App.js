@@ -10,6 +10,7 @@ const App = () => {
 
   const createNewTileBox = () => {
     setTileArray(generateTileArray(8))
+    console.log(tileArray)
   }
 
   return (

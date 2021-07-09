@@ -6,7 +6,11 @@ const StartGame = ({ createNewTileBox }) => {
     createNewTileBox()
   }
 
-  return <div onClick={handleClick}>Start Game</div>
+  return (
+    <div className='StartGame' onClick={handleClick}>
+      Start Game
+    </div>
+  )
 }
 
 export default StartGame

@@ -1,0 +1,9 @@
+.StartGame {
+  align-items: center;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  font-size: 5rem;
+  font-weight: 500;
+  justify-content: center;
+}
