@@ -1,6 +1,23 @@
 import React from "react"
 import "./index.css"
-import backside from "../../data/back_images/sun.jpg"
+import {
+  cat,
+  daddy,
+  emily,
+  george,
+  danny,
+  freddy,
+  gerald,
+  grampy,
+  grandpa,
+  granny,
+  mummy,
+  peppa,
+  potato,
+  rabbit,
+  suzie,
+  sun,
+} from "../../modules/peppapigImagesImports"
 
 const Tile = ({ tile }) => {
   const handleMouseEnter = () => {
@@ -9,7 +26,7 @@ const Tile = ({ tile }) => {
 
   return (
     <div className='Tile' onMouseEnter={handleMouseEnter}>
-      <img className='tileImage' src={backside} alt='backside'></img>
+      <img className='tileImage' src={cat} alt='backside'></img>
     </div>
   )
 }
