@@ -1,5 +1,6 @@
 import React from "react"
 import "./index.css"
+
 import {
   cat,
   daddy,
@@ -26,7 +27,7 @@ const Tile = ({ tile }) => {
 
   return (
     <div className='Tile' onMouseEnter={handleMouseEnter}>
-      <img className='tileImage' src={cat} alt='backside'></img>
+      <img className='tileImage' src={sun} alt='backside'></img>
     </div>
   )
 }

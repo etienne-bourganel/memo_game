@@ -1,6 +1,10 @@
 {
   "cards": [
     {
+      "id": 0,
+      "name": "suzie"
+    },
+    {
       "id": 1,
       "name": "cat"
     },
@@ -55,10 +59,6 @@
     {
       "id": 14,
       "name": "rabbit"
-    },
-    {
-      "id": 15,
-      "name": "suzie"
     }
   ]
 }
