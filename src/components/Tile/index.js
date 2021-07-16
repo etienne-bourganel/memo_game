@@ -21,12 +21,16 @@ import {
 } from "../../modules/peppapigImagesImports"
 
 const Tile = ({ tile }) => {
-  const handleMouseEnter = () => {
+  const [showedImg, setShowedImg] = React.useState(sun)
+
+  const handleClick = () => {
+    setShowedImg(tile.name)
+    console.log(showedImg)
     console.log(tile)
   }
 
   return (
-    <div className='Tile' onMouseEnter={handleMouseEnter}>
+    <div className='Tile' onClick={handleClick}>
       <img className='tileImage' src={sun} alt='backside'></img>
     </div>
   )

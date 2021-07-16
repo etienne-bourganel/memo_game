@@ -5,8 +5,8 @@ import Tile from "../Tile"
 const TilesBox = ({ tileArray }) => {
   return (
     <div className='TilesBox'>
-      {tileArray.map((tile) => (
-        <Tile tile={tile} />
+      {tileArray.map((tile, index) => (
+        <Tile key={`${tile.id}` + index} tile={tile} />
       ))}
     </div>
   )
