@@ -19,10 +19,10 @@ import sun from "../data/images/back_images/sun.jpg"
 export {
   cat,
   daddy,
-  danny,
   emily,
-  freddy,
   george,
+  danny,
+  freddy,
   gerald,
   grampy,
   grandpa,
@@ -31,6 +31,6 @@ export {
   peppa,
   potato,
   rabbit,
-  sun,
   suzie,
+  sun,
 }
