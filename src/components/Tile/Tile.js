@@ -3,11 +3,19 @@ import "./Tile.css"
 import selectCorrectImg from "../../modules/selectCorrectImg"
 import { sun } from "../../modules/selectCorrectImg"
 
-const Tile = ({ tile }) => {
+const Tile = ({ tileUniqueKey, tile, updatePair }) => {
   const [showedImg, setShowedImg] = React.useState(sun)
 
+  // const handleClick = () => {
+  //   setShowedImg(selectCorrectImg(showedImg === sun ? tile.name : sun))
+  // }
+
+  const tileInfo = () => {
+    return [tile.name, tileUniqueKey]
+  }
+
   const handleClick = () => {
-    setShowedImg(selectCorrectImg(showedImg === sun ? tile.name : sun))
+    updatePair(tileInfo())
   }
 
   return (
