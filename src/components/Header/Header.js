@@ -1,5 +1,5 @@
 import React from "react"
-import "./index.css"
+import "./Header.css"
 
 const Header = () => {
   return <div className='Header'>Memory Game</div>

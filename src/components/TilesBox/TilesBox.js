@@ -1,6 +1,6 @@
 import React from "react"
-import "./index.css"
-import Tile from "../Tile"
+import "./TilesBox.css"
+import Tile from "../Tile/Tile"
 
 const TilesBox = ({ tileArray }) => {
   return (

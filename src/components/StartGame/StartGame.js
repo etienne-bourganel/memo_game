@@ -1,5 +1,5 @@
 import React from "react"
-import "./index.css"
+import "./StartGame.css"
 
 const StartGame = ({ createNewTileBox }) => {
   const handleClick = () => {

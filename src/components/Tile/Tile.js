@@ -1,7 +1,7 @@
 import React from "react"
-import "./index.css"
+import "./Tile.css"
 import selectCorrectImg from "../../modules/selectCorrectImg"
-import { sun } from "../../modules/peppapigImagesImports"
+import { sun } from "../../modules/selectCorrectImg"
 
 const Tile = ({ tile }) => {
   const [showedImg, setShowedImg] = React.useState(sun)
