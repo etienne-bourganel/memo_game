@@ -1,26 +1,22 @@
 import React from "react"
 import "./Tile.css"
-import selectCorrectImg from "../../modules/selectCorrectImg"
+
 import { sun } from "../../modules/selectCorrectImg"
 
-const Tile = ({ tileUniqueKey, tile, updatePair }) => {
-  const [showedImg, setShowedImg] = React.useState(sun)
-
-  // const handleClick = () => {
-  //   setShowedImg(selectCorrectImg(showedImg === sun ? tile.name : sun))
-  // }
-
-  const tileInfo = () => {
-    return [tile.name, tileUniqueKey]
-  }
-
+const Tile = ({ tileKey, tileInfo, manageSelection, selection }) => {
   const handleClick = () => {
-    updatePair(tileInfo())
+    console.log(tileInfo)
+    manageSelection(tileInfo.name, tileKey)
+    console.log(
+      "tile1: " + selection.tile1Name + " - " + selection.tile1Key,
+      "\n",
+      "tile2: " + selection.tile2Name + " - " + selection.tile2Key
+    )
   }
 
   return (
     <div className='Tile' onClick={handleClick}>
-      <img className='tileImage' src={showedImg} alt={tile.name}></img>
+      <img className='tileImage' src={sun} alt={tileInfo.name}></img>
     </div>
   )
 }
