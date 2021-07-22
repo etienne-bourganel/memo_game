@@ -4,31 +4,20 @@ import "./Tile.css"
 import { sun } from "../../modules/selectCorrectImg"
 import selectCorrectImg from "../../modules/selectCorrectImg"
 
-const Tile = ({
-  tileKey,
-  tileInfo,
-  manageSelection,
-  activeKeys,
-  pushTile,
-  guessedNames,
-}) => {
+const Tile = ({ tileKey, tileInfo, pushTile, showImage }) => {
   const [imgToShow, setImgToShow] = React.useState(sun)
 
   const handleClick = () => {
-    console.log(tileInfo)
-    manageSelection(tileInfo.name, tileKey)
-    pushTile({ Name: tileInfo.name, Key: tileKey })
+    pushTile({ name: tileInfo.name, key: tileKey })
   }
 
-  React.useEffect(() => {
-    if (
-      tileKey === activeKeys[0] ||
-      tileKey === activeKeys[1] ||
-      guessedNames.includes(tileInfo.name)
-    ) {
-      setImgToShow(selectCorrectImg(tileInfo.name))
-    } else setImgToShow(sun)
-  }, [tileKey, activeKeys, tileInfo.name, guessedNames])
+  React.useEffect(
+    () =>
+      showImage({ name: tileInfo.name, key: tileKey })
+        ? setImgToShow(selectCorrectImg(tileInfo.name))
+        : setImgToShow(sun),
+    [showImage, tileInfo.name, tileKey]
+  )
 
   return (
     <div className='Tile' onClick={handleClick}>
