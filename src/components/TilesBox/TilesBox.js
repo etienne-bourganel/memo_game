@@ -15,7 +15,7 @@ const TilesBox = ({ tileArray }) => {
       setActiveTiles([...activeTiles, tile])
     } else if (activeTiles.length === 2) {
       compareTiles()
-      setActiveTiles([])
+      setActiveTiles([tile])
     }
   }
 

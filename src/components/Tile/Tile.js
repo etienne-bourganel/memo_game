@@ -1,6 +1,5 @@
 import React from "react"
 import "./Tile.css"
-
 import { sun } from "../../modules/selectCorrectImg"
 import selectCorrectImg from "../../modules/selectCorrectImg"
 
