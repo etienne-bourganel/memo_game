@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./TilesBox.css"
 import Tile from "../Tile/Tile"
 
@@ -14,8 +14,7 @@ const TilesBox = ({ tileArray }) => {
   const [tile2Key, setTile2Key] = React.useState("")
 
   const updateSelection = (tileName, tileKey) => {
-    if (tileKey === tile1Key || tile2Key) return
-    else if (!tile1Name) {
+    if (!tile1Name) {
       setTile1Name(tileName)
       setTile1Key(tileKey)
     } else if (!tile2Name) {
@@ -24,6 +23,27 @@ const TilesBox = ({ tileArray }) => {
     } else {
       resetSelection()
     }
+  }
+
+  const [activeTiles, setActiveTiles] = React.useState([])
+
+  const pushTile = (tile) => {
+    if (activeTiles.length < 2) {
+      setActiveTiles([...activeTiles, tile])
+    } else if (activeTiles.length === 2) {
+      compareTiles()
+      setActiveTiles([])
+    }
+  }
+
+  const [correctTilesNames, setCorrectTilesNames] = React.useState([])
+
+  const compareTiles = () => {
+    const activeTile1Name = activeTiles[0].Name
+    const activeTile2Name = activeTiles[1].Name
+
+    if (activeTile1Name === activeTile2Name)
+      setCorrectTilesNames([...correctTilesNames, activeTile1Name])
   }
 
   const resetSelection = () => {
@@ -37,6 +57,15 @@ const TilesBox = ({ tileArray }) => {
     updateSelection(tileName, tileKey)
   }
 
+  React.useEffect(() => {
+    console.log(
+      "\t tile1: " + tile1Name + " - " + tile1Key,
+      "\n\t tile2: " + tile2Name + " - " + tile2Key
+    )
+    console.log("Active tiles: " + JSON.stringify(activeTiles))
+    console.log("Correct keys: " + JSON.stringify(correctTilesNames))
+  })
+
   return (
     <div className='TilesBox'>
       {tileArray.map((tileInfo, index) => (
@@ -45,12 +74,9 @@ const TilesBox = ({ tileArray }) => {
           tileKey={uniqueKey(index, tileInfo)}
           tileInfo={tileInfo}
           manageSelection={manageSelection}
-          selection={{
-            tile1Name: tile1Name,
-            tile1Key: tile1Key,
-            tile2Name: tile2Name,
-            tile2Key: tile2Key,
-          }}
+          activeKeys={[tile1Key, tile2Key]}
+          pushTile={pushTile}
+          guessedNames={correctTilesNames}
         />
       ))}
     </div>
