@@ -13,7 +13,6 @@ const App = () => {
   const createNewTileBox = () => {
     const cardsArray = generateTileArray(numberOfTiles)
     setTileArray(cardsArray)
-    console.log(cardsArray)
   }
 
   return (
