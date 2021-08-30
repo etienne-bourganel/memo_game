@@ -12,7 +12,11 @@ const TilesBox = ({ tileArray }) => {
 
   const pushTile = (tile) => {
     if (activeTiles.length < 2) {
-      setActiveTiles([...activeTiles, tile])
+      if (activeTiles.length === 1 && tile.key === activeTiles[0].key) {
+        return
+      } else {
+        setActiveTiles([...activeTiles, tile])
+      }
     } else if (activeTiles.length === 2) {
       compareTiles()
       setActiveTiles([tile])
