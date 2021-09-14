@@ -14,7 +14,7 @@ import potato from "../data/images/peppapig_images/potato.png"
 import rabbit from "../data/images/peppapig_images/rabbit.png"
 import suzie from "../data/images/peppapig_images/suzie.png"
 
-import sun from "../data/images/back_images/sun.jpg"
+import sun from "../data/images/back_images/sun2.png"
 
 const selectCorrectImg = (characterName) => {
   switch (characterName) {

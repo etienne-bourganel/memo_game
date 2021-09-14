@@ -1,9 +1,14 @@
 .StartGame {
+  font-family: "Pacifico", cursive;
   align-items: center;
-  color: red;
+  color: rgb(255, 30, 0);
   cursor: pointer;
   display: flex;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 500;
-  justify-content: center;
+  grid-area: start;
+}
+
+.Restart:hover {
+  color: rgb(255, 162, 0);
 }
