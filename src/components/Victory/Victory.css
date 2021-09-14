@@ -1,0 +1,27 @@
+.Victory {
+  font-family: "Pacifico", cursive;
+  align-items: center;
+  color: rgb(0, 81, 255);
+  display: flex;
+  font-size: 6rem;
+  font-weight: 500;
+  justify-content: center;
+  margin-top: 3rem;
+  animation-direction: alternate;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-name: blinker;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes blinker {
+  from {
+    border-color: #fc72a9;
+    color: #fc72a9;
+  }
+
+  to {
+    border-color: rgb(23, 118, 9);
+    color: rgb(23, 118, 9);
+  }
+}

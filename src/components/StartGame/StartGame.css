@@ -1,9 +1,19 @@
 .StartGame {
-  align-items: center;
-  color: red;
+  background-color: aquamarine;
+  border: 2px solid #000;
+  font-family: "Pacifico", cursive;
+  color: rgb(0, 81, 255);
   cursor: pointer;
-  display: flex;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 500;
-  justify-content: center;
+  left: 50%;
+  margin-top: 16rem;
+  padding: 1rem;
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.StartGame:hover {
+  color: rgb(255, 162, 0);
 }

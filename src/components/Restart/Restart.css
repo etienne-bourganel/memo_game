@@ -1,0 +1,16 @@
+.Restart {
+  font-family: "Pacifico", cursive;
+  align-items: center;
+  color: rgb(255, 30, 0);
+  cursor: pointer;
+  display: flex;
+  font-size: 3rem;
+  font-weight: 500;
+  justify-content: end;
+  margin-right: 10rem;
+  margin-top: 1rem;
+}
+
+.Restart:hover {
+  color: rgb(255, 162, 0);
+}
