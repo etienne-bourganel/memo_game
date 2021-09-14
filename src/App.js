@@ -5,6 +5,7 @@ import Restart from "./components/Restart/Restart"
 import Victory from "./components/Victory/Victory"
 import TilesBox from "./components/TilesBox/TilesBox"
 import generateTileArray from "./modules/generateTileArray"
+import VictoryConfetti from "./components/VictoryConfetti/VictoryConfetti"
 
 const App = () => {
   const numberOfTiles = 16
@@ -38,7 +39,7 @@ const App = () => {
 
   const checkVictory = () => {
     return correctTilesNames.length === 7 && activeTiles.length === 2
-      ? (setVictory(true), setGameStarted(false))
+      ? setVictory(true)
       : false
   }
 
@@ -60,9 +61,7 @@ const App = () => {
   }
 
   React.useEffect(() => {
-    return checkVictory()
-      ? console.log("Victory from useEffect!")
-      : console.log("No victory thus far.")
+    checkVictory()
   })
 
   return (
@@ -85,6 +84,7 @@ const App = () => {
         />
       )}
       {victory && <Victory />}
+      {victory && <VictoryConfetti />}
     </div>
   )
 }
