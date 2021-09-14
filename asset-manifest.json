@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/memo_game/static/css/main.30bdc271.chunk.css",
+    "main.js": "/memo_game/static/js/main.7566f707.chunk.js",
+    "main.js.map": "/memo_game/static/js/main.7566f707.chunk.js.map",
+    "runtime-main.js": "/memo_game/static/js/runtime-main.b12c5e53.js",
+    "runtime-main.js.map": "/memo_game/static/js/runtime-main.b12c5e53.js.map",
+    "static/js/2.6d770ea0.chunk.js": "/memo_game/static/js/2.6d770ea0.chunk.js",
+    "static/js/2.6d770ea0.chunk.js.map": "/memo_game/static/js/2.6d770ea0.chunk.js.map",
+    "index.html": "/memo_game/index.html",
+    "static/css/main.30bdc271.chunk.css.map": "/memo_game/static/css/main.30bdc271.chunk.css.map",
+    "static/js/2.6d770ea0.chunk.js.LICENSE.txt": "/memo_game/static/js/2.6d770ea0.chunk.js.LICENSE.txt",
+    "static/media/cat.e7393913.png": "/memo_game/static/media/cat.e7393913.png",
+    "static/media/daddy.fa54e717.png": "/memo_game/static/media/daddy.fa54e717.png",
+    "static/media/danny.93e5998f.png": "/memo_game/static/media/danny.93e5998f.png",
+    "static/media/emily.e1b1d521.png": "/memo_game/static/media/emily.e1b1d521.png",
+    "static/media/freddy.3e8ded9b.png": "/memo_game/static/media/freddy.3e8ded9b.png",
+    "static/media/george.18943e8b.png": "/memo_game/static/media/george.18943e8b.png",
+    "static/media/gerald.a096c903.png": "/memo_game/static/media/gerald.a096c903.png",
+    "static/media/grampy.04bcfa0d.png": "/memo_game/static/media/grampy.04bcfa0d.png",
+    "static/media/grandpa.2e26f64a.png": "/memo_game/static/media/grandpa.2e26f64a.png",
+    "static/media/granny.3e2e2762.png": "/memo_game/static/media/granny.3e2e2762.png",
+    "static/media/mummy.039cd6ea.png": "/memo_game/static/media/mummy.039cd6ea.png",
+    "static/media/peppa.4ef2be07.png": "/memo_game/static/media/peppa.4ef2be07.png",
+    "static/media/potato.92e5b66d.png": "/memo_game/static/media/potato.92e5b66d.png",
+    "static/media/rabbit.9ff2c1f1.png": "/memo_game/static/media/rabbit.9ff2c1f1.png",
+    "static/media/sun2.e3e5b76e.png": "/memo_game/static/media/sun2.e3e5b76e.png",
+    "static/media/suzie.63018b43.png": "/memo_game/static/media/suzie.63018b43.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b12c5e53.js",
+    "static/js/2.6d770ea0.chunk.js",
+    "static/css/main.30bdc271.chunk.css",
+    "static/js/main.7566f707.chunk.js"
+  ]
+}
