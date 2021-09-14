@@ -66,24 +66,29 @@ const App = () => {
 
   return (
     <div>
-      {!gameStarted && (
-        <StartGame
-          createNewTileBox={createNewTileBox}
-          gameStarted={setGameStarted}
-        />
-      )}
       <TilesBox
         tileArray={tileArray}
         pushTileAbove={pushTile}
         showImage={showImage}
       />
-      {gameStarted && (
-        <Restart
-          createNewTileBox={createNewTileBox}
-          gameStarted={setGameStarted}
-        />
-      )}
-      {victory && <Victory />}
+
+      <div className='subMenu'>
+        {!gameStarted && (
+          <StartGame
+            createNewTileBox={createNewTileBox}
+            gameStarted={setGameStarted}
+          />
+        )}
+        {gameStarted && (
+          <Restart
+            createNewTileBox={createNewTileBox}
+            gameStarted={setGameStarted}
+            victory={victory}
+          />
+        )}
+        {victory && <Victory />}
+      </div>
+
       {victory && <VictoryConfetti />}
     </div>
   )

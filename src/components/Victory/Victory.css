@@ -3,10 +3,11 @@
   align-items: center;
   color: rgb(0, 81, 255);
   display: flex;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 500;
-  justify-content: center;
-  margin-top: 3rem;
+  justify-content: flex-start;
+  grid-area: victory;
+
   animation-direction: alternate;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
@@ -15,13 +16,15 @@
 }
 
 @keyframes blinker {
-  from {
-    border-color: #fc72a9;
+  20% {
     color: #fc72a9;
   }
 
-  to {
-    border-color: rgb(23, 118, 9);
-    color: rgb(23, 118, 9);
+  50% {
+    color: #fce372;
+  }
+
+  80% {
+    color: rgb(16, 255, 171);
   }
 }
