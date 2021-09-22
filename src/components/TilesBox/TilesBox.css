@@ -1,7 +1,7 @@
 .TilesBox {
   aspect-ratio: 1 / 1;
-  background-color: rgb(247, 217, 173);
-  border: 1px solid rgb(177, 139, 14);
+  background-color: #b8d8d8;
+  border: 1px solid #7a9e9f;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);

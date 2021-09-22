@@ -1,15 +1,14 @@
 .Victory {
   font-family: 'Bonbon', cursive;
   align-items: center;
-  color: rgb(0, 81, 255);
+  color: #5d2e8c;
   display: flex;
   font-size: 4rem;
-  font-weight: 500;
   justify-content: flex-start;
   grid-area: victory;
 
   animation-direction: alternate;
-  animation-duration: 0.5s;
+  animation-duration: 0.8s;
   animation-iteration-count: infinite;
   animation-name: blinker;
   animation-timing-function: ease-in-out;
@@ -17,14 +16,18 @@
 
 @keyframes blinker {
   20% {
-    color: #fc72a9;
+    color: #ff6666;
   }
 
-  50% {
-    color: #fce372;
+  40% {
+    color: #ccff66;
+  }
+
+  60% {
+    color: #2ec4b6;
   }
 
   80% {
-    color: rgb(16, 255, 171);
+    color: #f6ae2d;
   }
 }
