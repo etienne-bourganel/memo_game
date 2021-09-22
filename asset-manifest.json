@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/memo_game/static/css/main.30bdc271.chunk.css",
-    "main.js": "/memo_game/static/js/main.3459d00b.chunk.js",
-    "main.js.map": "/memo_game/static/js/main.3459d00b.chunk.js.map",
+    "main.css": "/memo_game/static/css/main.f1d33acf.chunk.css",
+    "main.js": "/memo_game/static/js/main.42f1d2c3.chunk.js",
+    "main.js.map": "/memo_game/static/js/main.42f1d2c3.chunk.js.map",
     "runtime-main.js": "/memo_game/static/js/runtime-main.b12c5e53.js",
     "runtime-main.js.map": "/memo_game/static/js/runtime-main.b12c5e53.js.map",
-    "static/js/2.6d770ea0.chunk.js": "/memo_game/static/js/2.6d770ea0.chunk.js",
-    "static/js/2.6d770ea0.chunk.js.map": "/memo_game/static/js/2.6d770ea0.chunk.js.map",
+    "static/js/2.2ea8ad52.chunk.js": "/memo_game/static/js/2.2ea8ad52.chunk.js",
+    "static/js/2.2ea8ad52.chunk.js.map": "/memo_game/static/js/2.2ea8ad52.chunk.js.map",
     "index.html": "/memo_game/index.html",
-    "static/css/main.30bdc271.chunk.css.map": "/memo_game/static/css/main.30bdc271.chunk.css.map",
-    "static/js/2.6d770ea0.chunk.js.LICENSE.txt": "/memo_game/static/js/2.6d770ea0.chunk.js.LICENSE.txt",
+    "static/css/main.f1d33acf.chunk.css.map": "/memo_game/static/css/main.f1d33acf.chunk.css.map",
+    "static/js/2.2ea8ad52.chunk.js.LICENSE.txt": "/memo_game/static/js/2.2ea8ad52.chunk.js.LICENSE.txt",
     "static/media/cat.e7393913.png": "/memo_game/static/media/cat.e7393913.png",
     "static/media/daddy.fa54e717.png": "/memo_game/static/media/daddy.fa54e717.png",
     "static/media/danny.93e5998f.png": "/memo_game/static/media/danny.93e5998f.png",
@@ -29,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b12c5e53.js",
-    "static/js/2.6d770ea0.chunk.js",
-    "static/css/main.30bdc271.chunk.css",
-    "static/js/main.3459d00b.chunk.js"
+    "static/js/2.2ea8ad52.chunk.js",
+    "static/css/main.f1d33acf.chunk.css",
+    "static/js/main.42f1d2c3.chunk.js"
   ]
 }
