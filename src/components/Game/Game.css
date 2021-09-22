@@ -1,7 +1,6 @@
 .mainContainer {
-  background-color: rgb(172, 249, 255);
-
   align-items: center;
+  background-color: #eef5db;
   display: flex;
   height: 100vh;
   justify-content: center;

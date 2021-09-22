@@ -1,14 +1,13 @@
 .StartGame {
   font-family: 'Bonbon', cursive;
   align-items: center;
-  color: rgb(0, 60, 255);
+  color: #005377;
   cursor: pointer;
   display: flex;
   font-size: 4rem;
-
   grid-area: start;
 }
 
 .StartGame:hover {
-  color: rgb(255, 162, 0);
+  color: #a44200;
 }
