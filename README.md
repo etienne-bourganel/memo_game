@@ -4,7 +4,7 @@
 
 This project is designed as a birthday present for my 3-year old niece who loves Peppa Pig. Hopefully she will enjoy it as much as I struggled to make it work :)
 
-Live version: https://etienne-bourganel.github.io/memo_game/
+Live version: <https://etienne-bourganel.github.io/memo_game/>
 
 ## Other boring and tech stuff
 
