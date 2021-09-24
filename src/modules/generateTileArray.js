@@ -1,7 +1,14 @@
-const peppapigData = require("../data/peppapig.json")
-const allCardsArray = peppapigData.cards
+const peppapigData = require('../data/peppapig.json')
+const zoo_animals = require('../data/zoo_animals.json')
 
-const generateTileArray = (numberOfTiles) => {
+const generateTileArray = (numberOfTiles, theme) => {
+  const allCardsArray =
+    theme.name === 'peppa'
+      ? peppapigData.cards
+      : theme.name === 'zoo'
+      ? zoo_animals.cards
+      : null
+
   let tileArray = []
 
   const shuffleArray = (array) => {
@@ -12,7 +19,7 @@ const generateTileArray = (numberOfTiles) => {
     return array
   }
 
-  let numberOfCharacters = 15
+  const numberOfCharacters = theme.nrOfCharacters
 
   for (let i = 0; tileArray.length < numberOfTiles; i++) {
     const randomNumber = Math.floor(Math.random() * numberOfCharacters)
