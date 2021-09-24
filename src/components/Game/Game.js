@@ -2,17 +2,33 @@ import React, { useState } from 'react'
 import StartGame from '../StartGame/StartGame'
 import Victory from '../Victory/Victory'
 import TilesBox from '../TilesBox/TilesBox'
+import ThemeChoice from '../ThemeChoice/ThemeChoice'
 import generateTileArray from '../../modules/generateTileArray'
 import VictoryConfetti from '../VictoryConfetti/VictoryConfetti'
 import './Game.css'
 
 const Game = () => {
+  const zooTheme = { name: 'zoo', nrOfCharacters: 16 }
+  const peppaTheme = { name: 'peppa', nrOfCharacters: 15 }
+
   const numberOfTiles = 16
   const [tileArray, setTileArray] = useState([])
   const [correctTilesNames, setCorrectTilesNames] = useState([])
   const [activeTiles, setActiveTiles] = useState([])
   const [victory, setVictory] = useState(false)
   const [gameStarted, setGameStarted] = useState(false)
+  const [theme, setTheme] = useState(peppaTheme)
+
+  const handleThemeChoice = (themeChoice) => {
+    setTheme(
+      themeChoice === 'zoo'
+        ? zooTheme
+        : themeChoice === 'peppa'
+        ? peppaTheme
+        : {}
+    )
+    console.log(themeChoice)
+  }
 
   const pushTile = (tile) => {
     if (victory) return
@@ -51,7 +67,8 @@ const Game = () => {
   }
 
   const createNewTileBox = () => {
-    const cardsArray = generateTileArray(numberOfTiles)
+    const cardsArray = generateTileArray(numberOfTiles, theme)
+    console.log(cardsArray)
     setTileArray(cardsArray)
     setCorrectTilesNames([])
     setActiveTiles([])
@@ -65,6 +82,7 @@ const Game = () => {
   return (
     <div className='mainContainer'>
       <div className='subContainer'>
+        <ThemeChoice handleThemeChoice={handleThemeChoice} />
         <TilesBox
           tileArray={tileArray}
           pushTileAbove={pushTile}

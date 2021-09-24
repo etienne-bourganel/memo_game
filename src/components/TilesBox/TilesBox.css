@@ -2,6 +2,8 @@
   aspect-ratio: 1 / 1;
   background-color: #b8d8d8;
   border: 1px solid #7a9e9f;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 10px rgb(0 0 0 / 0.2);
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);

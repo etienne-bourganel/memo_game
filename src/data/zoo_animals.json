@@ -1,0 +1,68 @@
+{
+  "cards": [
+    {
+      "id": 0,
+      "name": "fox"
+    },
+    {
+      "id": 1,
+      "name": "fox2"
+    },
+    {
+      "id": 2,
+      "name": "hedgehog"
+    },
+    {
+      "id": 3,
+      "name": "koala"
+    },
+    {
+      "id": 4,
+      "name": "lemur"
+    },
+    {
+      "id": 5,
+      "name": "lion"
+    },
+    {
+      "id": 6,
+      "name": "mouse"
+    },
+    {
+      "id": 7,
+      "name": "owl"
+    },
+    {
+      "id": 8,
+      "name": "panda"
+    },
+    {
+      "id": 9,
+      "name": "pinguin"
+    },
+    {
+      "id": 10,
+      "name": "rabbit2"
+    },
+    {
+      "id": 11,
+      "name": "seal"
+    },
+    {
+      "id": 12,
+      "name": "snail"
+    },
+    {
+      "id": 13,
+      "name": "squirrel"
+    },
+    {
+      "id": 14,
+      "name": "tiger"
+    },
+    {
+      "id": 15,
+      "name": "weirdbear"
+    }
+  ]
+}
