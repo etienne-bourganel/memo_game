@@ -80,6 +80,7 @@ const Game = () => {
         <ThemeChoice
           handleThemeChoice={handleThemeChoice}
           themesArray={themesArray}
+          activeTheme={theme}
         />
         <TilesBox
           tileArray={tileArray}

@@ -1,0 +1,15 @@
+.themeButton {
+  background-color: yellow;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 3rem;
+  margin-left: 2rem;
+}
+
+.active {
+  background-color: aqua;
+}
