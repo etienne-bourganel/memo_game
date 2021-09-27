@@ -8,26 +8,21 @@ import VictoryConfetti from '../VictoryConfetti/VictoryConfetti'
 import './Game.css'
 
 const Game = () => {
-  const zooTheme = { name: 'zoo', nrOfCharacters: 16 }
-  const peppaTheme = { name: 'peppa', nrOfCharacters: 15 }
-
   const numberOfTiles = 16
+  const themesArray = [
+    { name: 'Peppa Pig', nrOfCharacters: 15 },
+    { name: 'Zoo', nrOfCharacters: 16 },
+  ]
+
   const [tileArray, setTileArray] = useState([])
   const [correctTilesNames, setCorrectTilesNames] = useState([])
   const [activeTiles, setActiveTiles] = useState([])
   const [victory, setVictory] = useState(false)
   const [gameStarted, setGameStarted] = useState(false)
-  const [theme, setTheme] = useState(peppaTheme)
+  const [theme, setTheme] = useState(themesArray[0])
 
   const handleThemeChoice = (themeChoice) => {
-    setTheme(
-      themeChoice === 'zoo'
-        ? zooTheme
-        : themeChoice === 'peppa'
-        ? peppaTheme
-        : {}
-    )
-    console.log(themeChoice)
+    setTheme(themeChoice)
   }
 
   const pushTile = (tile) => {
@@ -82,7 +77,10 @@ const Game = () => {
   return (
     <div className='mainContainer'>
       <div className='subContainer'>
-        <ThemeChoice handleThemeChoice={handleThemeChoice} />
+        <ThemeChoice
+          handleThemeChoice={handleThemeChoice}
+          themesArray={themesArray}
+        />
         <TilesBox
           tileArray={tileArray}
           pushTileAbove={pushTile}

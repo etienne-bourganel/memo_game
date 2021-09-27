@@ -1,23 +1,21 @@
 import React from 'react'
 import './ThemeChoice.css'
 
-const ThemeChoice = ({ handleThemeChoice }) => {
+const ThemeChoice = ({ handleThemeChoice, themesArray }) => {
   const handleClick = (themeChoice) => {
     handleThemeChoice(themeChoice)
   }
 
   return (
     <div className='themeBar'>
-      <div
-        className='themeButton'
-        onClick={() => handleClick('peppa')}
-        children='Peppa'
-      ></div>
-      <div
-        className='themeButton'
-        onClick={() => handleClick('zoo')}
-        children='Zoo'
-      ></div>
+      {themesArray.map((theme, index) => (
+        <div
+          key={theme.name}
+          className='themeButton'
+          onClick={() => handleClick(themesArray[index])}
+          children={theme.name}
+        ></div>
+      ))}
     </div>
   )
 }

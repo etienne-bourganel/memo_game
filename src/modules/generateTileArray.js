@@ -3,9 +3,9 @@ const zoo_animals = require('../data/zoo_animals.json')
 
 const generateTileArray = (numberOfTiles, theme) => {
   const allCardsArray =
-    theme.name === 'peppa'
+    theme.name === 'Peppa Pig'
       ? peppapigData.cards
-      : theme.name === 'zoo'
+      : theme.name === 'Zoo'
       ? zoo_animals.cards
       : null
 
