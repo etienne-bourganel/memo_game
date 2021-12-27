@@ -1,6 +1,6 @@
 .StartGame {
   font-family: 'Bonbon', cursive;
-  align-items: center;
+  /* align-items: center; */
   color: #005377;
   cursor: pointer;
   display: flex;

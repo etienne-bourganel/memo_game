@@ -1,7 +1,7 @@
-import React from "react"
-import "./Tile.css"
-import { sun } from "../../modules/selectCorrectImg"
-import selectCorrectImg from "../../modules/selectCorrectImg"
+import React from 'react'
+import './Tile.css'
+import { sun } from '../../modules/selectCorrectImg'
+import selectCorrectImg from '../../modules/selectCorrectImg'
 
 const Tile = ({ tileKey, tileInfo, pushTile, showImage }) => {
   const [imgToShow, setImgToShow] = React.useState(sun)
@@ -20,7 +20,11 @@ const Tile = ({ tileKey, tileInfo, pushTile, showImage }) => {
 
   return (
     <div className='Tile' onClick={handleClick}>
-      <img className='tileImage' src={imgToShow} alt={tileInfo.name}></img>
+      <img
+        className='tileImage tileWithBorder'
+        src={imgToShow}
+        alt={tileInfo.name}
+      ></img>
     </div>
   )
 }

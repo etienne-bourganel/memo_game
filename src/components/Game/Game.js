@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import StartGame from '../StartGame/StartGame'
-import Victory from '../Victory/Victory'
-import TilesBox from '../TilesBox/TilesBox'
-import ThemeChoice from '../ThemeChoice/ThemeChoice'
-import generateTileArray from '../../modules/generateTileArray'
-import VictoryConfetti from '../VictoryConfetti/VictoryConfetti'
-import './Game.css'
+import React, { useState } from "react"
+import StartGame from "../StartGame/StartGame"
+import Victory from "../Victory/Victory"
+import TilesBox from "../TilesBox/TilesBox"
+import ThemeChoice from "../ThemeChoice/ThemeChoice"
+import generateTileArray from "../../modules/generateTileArray"
+import VictoryConfetti from "../VictoryConfetti/VictoryConfetti"
+import "./Game.css"
 
 const Game = () => {
   const numberOfTiles = 16
   const themesArray = [
-    { name: 'Peppa Pig', nrOfCharacters: 15 },
-    { name: 'Zoo', nrOfCharacters: 16 },
+    { name: "Peppa Pig", nrOfCharacters: 15 },
+    { name: "Zoo", nrOfCharacters: 16 },
   ]
 
   const [tileArray, setTileArray] = useState([])
@@ -63,7 +63,6 @@ const Game = () => {
 
   const createNewTileBox = () => {
     const cardsArray = generateTileArray(numberOfTiles, theme)
-    console.log(cardsArray)
     setTileArray(cardsArray)
     setCorrectTilesNames([])
     setActiveTiles([])
@@ -75,33 +74,30 @@ const Game = () => {
   })
 
   return (
-    <div className='mainContainer'>
-      <div className='subContainer'>
-        <ThemeChoice
-          handleThemeChoice={handleThemeChoice}
-          themesArray={themesArray}
-          activeTheme={theme}
-        />
+    <div className="mainContainer">
+      <div className="subContainer">
+        <div className="subMenu">
+          <ThemeChoice
+            handleThemeChoice={handleThemeChoice}
+            themesArray={themesArray}
+            activeTheme={theme}
+          />
+          <div>
+            <StartGame
+              createNewTileBox={createNewTileBox}
+              gameStarted={setGameStarted}
+              victory={victory}
+              children={!gameStarted ? "Start!" : "Restart"}
+            />
+
+            {victory && <VictoryConfetti />}
+          </div>
+        </div>
         <TilesBox
           tileArray={tileArray}
           pushTileAbove={pushTile}
           showImage={showImage}
         />
-
-        <div className='subMenu'>
-          <StartGame
-            createNewTileBox={createNewTileBox}
-            gameStarted={setGameStarted}
-            children={!gameStarted ? 'Start!' : 'Restart'}
-          />
-
-          {victory && (
-            <>
-              <Victory />
-              <VictoryConfetti />
-            </>
-          )}
-        </div>
       </div>
     </div>
   )

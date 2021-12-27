@@ -1,14 +1,15 @@
 import React from "react"
 import "./StartGame.css"
+import clsx from "clsx"
 
-const StartGame = ({ createNewTileBox, gameStarted, children }) => {
+const StartGame = ({ createNewTileBox, gameStarted, victory, children }) => {
   const handleClick = () => {
     createNewTileBox()
     gameStarted(true)
   }
 
   return (
-    <div className='StartGame' onClick={handleClick} children={children}></div>
+    <div className={clsx('StartGame', {'Victory': !!victory})} onClick={handleClick} children={children}></div>
   )
 }
 
