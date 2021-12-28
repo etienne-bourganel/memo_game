@@ -1,17 +1,22 @@
-import React from 'react'
-import './ThemeChoice.css'
-import ThemeButton from '../ThemeButton/ThemeButton'
+import React from "react"
+import "./ThemeChoice.css"
+import ThemeButton from "../ThemeButton/ThemeButton"
 
-const ThemeChoice = ({ handleThemeChoice, themesArray, activeTheme }) => {
+const ThemeChoice = ({
+  handleThemeChoice,
+  themesArray,
+  activeTheme,
+  restart,
+}) => {
   return (
-    <div className='themeBar'>
+    <div className="themeBar">
       {themesArray.map((theme, index) => (
         <ThemeButton
           key={theme.name}
           handleThemeChoice={handleThemeChoice}
-          children={theme.name}
           theme={themesArray[index]}
           active={activeTheme.name === theme.name}
+          restart={restart}
         />
       ))}
     </div>

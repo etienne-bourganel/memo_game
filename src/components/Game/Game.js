@@ -60,12 +60,16 @@ const Game = () => {
       : false
   }
 
-  const createNewTileBox = () => {
+  const createNewTileBox = (theme) => {
     const cardsArray = generateTileArray(numberOfTiles, theme)
     setTileArray(cardsArray)
     setCorrectTilesNames([])
     setActiveTiles([])
     setVictory(false)
+  }
+
+  const restart = (theme) => {
+    createNewTileBox(theme)
   }
 
   React.useEffect(() => {
@@ -80,13 +84,15 @@ const Game = () => {
             handleThemeChoice={handleThemeChoice}
             themesArray={themesArray}
             activeTheme={theme}
+            restart={restart}
           />
           <div>
             <StartGame
               createNewTileBox={createNewTileBox}
               gameStarted={setGameStarted}
               victory={victory}
-              children={!gameStarted ? "Start!" : "Restart"}
+              theme= {theme}
+              children={!gameStarted ? "Jouer!" : "Redémarrer"}
             />
 
             {victory && <VictoryConfetti />}
@@ -96,6 +102,9 @@ const Game = () => {
           tileArray={tileArray}
           pushTileAbove={pushTile}
           showImage={showImage}
+          activeTheme={theme}
+          gameStarted={gameStarted}
+          gameOngoing={activeTiles.length}
         />
       </div>
     </div>

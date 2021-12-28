@@ -1,11 +1,7 @@
 .themeButton {
   align-items: center;
-  background-color: rgb(175, 238, 242);
-  border-radius: 0.7rem;
-  color: rgb(0, 145, 255);
   cursor: pointer;
   display: flex;
-  font-size: 1.5rem;
   height: 3rem;
   justify-content: center;
   margin-left: 2rem;
@@ -13,7 +9,5 @@
 }
 
 .active {
-  background-color: aqua;
-  border: 2px solid rgb(77, 255, 1);
-  color: rgb(128, 0, 255);
 }
+

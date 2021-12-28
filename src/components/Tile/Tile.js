@@ -1,9 +1,17 @@
-import React from 'react'
-import './Tile.css'
-import { sun } from '../../modules/selectCorrectImg'
-import selectCorrectImg from '../../modules/selectCorrectImg'
+import React from "react"
+import "./Tile.css"
+import { sun } from "../../modules/selectCorrectImg"
+import selectCorrectImg from "../../modules/selectCorrectImg"
+import clsx from "clsx"
 
-const Tile = ({ tileKey, tileInfo, pushTile, showImage }) => {
+const Tile = ({
+  tileKey,
+  tileInfo,
+  pushTile,
+  showImage,
+  activeTheme,
+  gameOngoing,
+}) => {
   const [imgToShow, setImgToShow] = React.useState(sun)
 
   const handleClick = () => {
@@ -19,12 +27,13 @@ const Tile = ({ tileKey, tileInfo, pushTile, showImage }) => {
   )
 
   return (
-    <div className='Tile' onClick={handleClick}>
+    <div className="Tile" onClick={handleClick}>
       <img
-        className='tileImage tileWithBorder'
+        className={clsx("tileImage", {
+          tileWithBorder: imgToShow === sun || activeTheme.name === "Zoo",
+        })}
         src={imgToShow}
-        alt={tileInfo.name}
-      ></img>
+        alt={tileInfo.name}></img>
     </div>
   )
 }

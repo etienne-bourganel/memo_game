@@ -1,14 +1,12 @@
 .Tile {
-  aspect-ratio: 1 / 1;
-
-  display: flex;
   align-items: center;
+  aspect-ratio: 1 / 1;
+  display: flex;
   justify-content: center;
 }
 
 .tileImage {
   aspect-ratio: 1 / 1;
-
   border-radius: 1rem;
   height: auto;
   width: 100%;
