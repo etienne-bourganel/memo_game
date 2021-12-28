@@ -4,6 +4,8 @@ import TilesBox from "../TilesBox/TilesBox"
 import ThemeChoice from "../ThemeChoice/ThemeChoice"
 import generateTileArray from "../../modules/generateTileArray"
 import VictoryConfetti from "../VictoryConfetti/VictoryConfetti"
+import { FaPlay } from "react-icons/fa"
+import { FaUndo } from "react-icons/fa"
 import "./Game.css"
 
 const Game = () => {
@@ -91,8 +93,8 @@ const Game = () => {
               createNewTileBox={createNewTileBox}
               gameStarted={setGameStarted}
               victory={victory}
-              theme= {theme}
-              children={!gameStarted ? "Jouer!" : "Redémarrer"}
+              theme={theme}
+              children={!gameStarted ? <FaPlay /> : <FaUndo />}
             />
 
             {victory && <VictoryConfetti />}
