@@ -1,6 +1,6 @@
 .TilesBox {
   aspect-ratio: 1 / 1;
-  background-color: #b8d8d8;
+  background-color: #D6E5FA;
   border: 1px solid #7a9e9f;
   border-radius: 1rem;
   box-shadow: 3px 3px 10px rgb(0 0 0 / 0.2);
@@ -8,9 +8,8 @@
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  height: 80%;
-  margin: 3rem auto;
-  max-width: 60%;
+  margin:  2rem auto;
+  max-height: 70%;
+  max-width: 90%;
   padding: 1rem;
-  width: 70vw;
 }

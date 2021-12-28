@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import StartGame from "../StartGame/StartGame"
-import Victory from "../Victory/Victory"
 import TilesBox from "../TilesBox/TilesBox"
 import ThemeChoice from "../ThemeChoice/ThemeChoice"
 import generateTileArray from "../../modules/generateTileArray"

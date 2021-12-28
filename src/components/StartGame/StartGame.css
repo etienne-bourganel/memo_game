@@ -4,10 +4,41 @@
   color: #005377;
   cursor: pointer;
   display: flex;
-  font-size: 4rem;
+  font-size: 2rem;
   grid-area: start;
 }
 
 .StartGame:hover {
   color: #a44200;
+}
+
+.Victory {
+  font-family: 'Bonbon', cursive;
+  align-items: center;
+  color: #5d2e8c;
+  display: flex;
+  justify-content: flex-start;
+  animation-direction: alternate;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-name: blinker;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes blinker {
+  20% {
+    color: #ff6666;
+  }
+
+  40% {
+    color: #ccff66;
+  }
+
+  60% {
+    color: #2ec4b6;
+  }
+
+  80% {
+    color: #f6ae2d;
+  }
 }
