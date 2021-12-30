@@ -4,7 +4,6 @@ import TilesBox from "../TilesBox/TilesBox"
 import ThemeChoice from "../ThemeChoice/ThemeChoice"
 import generateTileArray from "../../modules/generateTileArray"
 import VictoryConfetti from "../VictoryConfetti/VictoryConfetti"
-import { FaPlay } from "react-icons/fa"
 import { FaUndo } from "react-icons/fa"
 import "./Game.css"
 
@@ -13,6 +12,7 @@ const Game = () => {
   const themesArray = [
     { name: "Peppa Pig", nrOfCharacters: 15 },
     { name: "Zoo", nrOfCharacters: 16 },
+    { name: "Disney", nrOfCharacters: 13 },
   ]
 
   const [tileArray, setTileArray] = useState([])
@@ -78,6 +78,10 @@ const Game = () => {
     checkVictory()
   })
 
+  React.useEffect(() => {
+    createNewTileBox(theme)
+  }, [])
+
   return (
     <div className="mainContainer">
       <div className="subContainer">
@@ -94,7 +98,7 @@ const Game = () => {
               gameStarted={setGameStarted}
               victory={victory}
               theme={theme}
-              children={!gameStarted ? <FaPlay /> : <FaUndo />}
+              children={<FaUndo />}
             />
 
             {victory && <VictoryConfetti />}

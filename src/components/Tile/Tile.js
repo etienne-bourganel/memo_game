@@ -30,7 +30,10 @@ const Tile = ({
     <div className="Tile" onClick={handleClick}>
       <img
         className={clsx("tileImage", {
-          tileWithBorder: imgToShow === sun || activeTheme.name === "Zoo",
+          tileWithBorder:
+            imgToShow === sun ||
+            activeTheme.name === "Zoo" ||
+            activeTheme.name === "Disney",
         })}
         src={imgToShow}
         alt={tileInfo.name}></img>

@@ -1,13 +1,20 @@
 .themeButton {
   align-items: center;
+  box-sizing: border-box;
   cursor: pointer;
   display: flex;
-  height: 3rem;
   justify-content: center;
-  margin-left: 2rem;
-  width: 20%;
+  margin-left: 1rem;
+}
+.themeImage {
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  max-width: 4rem;
+  min-width: 3.5rem;
+  width: 60%;
 }
 
 .active {
+  border-bottom: 3px solid #1c6dd0;
 }
-

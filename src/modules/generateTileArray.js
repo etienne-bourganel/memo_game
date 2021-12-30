@@ -1,12 +1,15 @@
-const peppapigData = require('../data/peppapig.json')
-const zoo_animals = require('../data/zoo_animals.json')
+const peppapigData = require("../data/peppapig.json")
+const zoo_animals = require("../data/zoo_animals.json")
+const disney = require("../data/disney.json")
 
 const generateTileArray = (numberOfTiles, theme) => {
   const allCardsArray =
-    theme.name === 'Peppa Pig'
+    theme.name === "Peppa Pig"
       ? peppapigData.cards
-      : theme.name === 'Zoo'
+      : theme.name === "Zoo"
       ? zoo_animals.cards
+      : theme.name === "Disney"
+      ? disney.cards
       : null
 
   let tileArray = []

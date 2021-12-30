@@ -3,13 +3,16 @@
   height: 100vh;
   justify-content: center;
   padding: 0.5rem;
+  width: 90%;
 }
 
 .subMenu {
+  align-items: center;
   display: flex;
   height: 2rem;
-  justify-content: space-around;
-  margin: 0.5rem auto;
-  padding: 0.5rem;
-  width: 80vw;
+  justify-content: space-between;
+  margin: 1rem auto;
+  max-height: 10%;
+  max-width: 70%;
+  padding: 1rem;
 }
