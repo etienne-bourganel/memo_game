@@ -6,7 +6,7 @@ This project is designed as a birthday present for my 3-year old niece who loves
 
 Live version: <https://etienne-bourganel.github.io/memo_game/>
 
-## Other boring and tech stuff
+## Other info
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
